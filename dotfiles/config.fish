@@ -1,4 +1,6 @@
 #!/bin/fish
+#  Fish shell configuration file
+#  this should be linked to ~/.config/fish/
 
 
 # INTERGRATIONS
