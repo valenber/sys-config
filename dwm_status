@@ -1,0 +1,14 @@
+#!/bin/bash
+# Statusbar script for dwm
+# time, sound, wifi, updates
+
+fecha() {
+	fecha="$(date +"%H:%M")"
+	echo -e " $fecha"
+}
+
+
+while true; do
+	xsetroot -name "$(fecha) | Valentin Berlin"
+	sleep 1m
+done 
