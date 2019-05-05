@@ -1,4 +1,5 @@
-/* See LICENSE file for copyright and license details. */
+/* dwm configuration file */
+/* this file should be linked into dwm folder as config.h before running 'sudo make clean install' */
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
