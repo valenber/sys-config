@@ -20,7 +20,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { " code", " term", " web", " chats", " media", "6", "7"};
+static const char *tags[] = { " code", " web", " chats", " media", " ", " "};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -28,7 +28,8 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Navigator",  NULL,     NULL,       1 << 3,       0,           -1 },
+ { "Firefox", NULL, NULL, 1 << 1, False,  -1 },
+ { "Skype", NULL, NULL, 1 << 2, True,  -1 },
 };
 
 /* layout(s) */
