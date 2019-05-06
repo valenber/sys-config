@@ -11,7 +11,14 @@ General dependencies: curl, git, nmcli
 ### Window Manager - [DWM 6.2](https://dwm.suckless.org/)
 
 DWM (Dynamc Window Manager) is part of the [suckless](https://suckless.org/philosophy/) software suite. In order to run it `xorg` needs to be installed and the file `.xinitrc` should contain instruction `exec dwm`. 
+For transparency to work it is necesary to install `compton` and launch it via `.xinitrc`. Transparency can be set in `.Xresources` file using value for `\*.alpha` (0-255).
 NOTE: I don't use any `display manager` at the moment.  
+
+#### General config 
+I used a fork of st created by [Luke Smith](https://github.com/LukeSmithxyz/st) that is already patched with transparency, scroll and some good keybindings.
+
+It works very well and I only made the folowing changes:
+* added keybinding to launch Firefox on Alt+Shif+w
 
 #### Status bar configuration (right-hand side)
 Status bar can be configured using bash scripts and some system utilities.
