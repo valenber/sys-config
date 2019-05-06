@@ -25,7 +25,7 @@ I changed :
 * font
 * replaced workplaces numbers with icons (you can paste glyphs)
 * set default workspace for certain programms (use `xprops` to detect class)
-* changed the default size of the main tile in monocle mode. [See dwm docs](https://dwm.suckless.org/).
+* changed the default size of the main tile in monocle mode. [See dwm docs](https://dwm.suckless.org/tutorial/).
 
 After making changes to the file you need to run `sudo make clean install` in the dwm directory to compile and install in on your system. The chages will take place after login.
 
