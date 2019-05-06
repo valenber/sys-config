@@ -18,6 +18,26 @@ set ai
 " tabulation
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 
+" PLUGINS
+" -------
+"
+call plug#begin()
+
+Plug 'haishanh/night-owl.vim'
+
+call plug#end()
+
+
+" VISUALS
+" -------
+
+" enable true colors
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" set colours
+colorscheme night-owl
 
 " KEY MAPPINGS
 "-------------
