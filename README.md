@@ -1,6 +1,10 @@
+# BEFORE PUSHING REVIEW DIFFS FOR SENSITIVE INFORMATION !!!
+
 # Manjaro System Setup 
 
 This config is based on Manjaro (Architect Edition) instalation. It includes multiple dotfiles, scripts and suckless software configs focused on web development. More than anything this is a collection of personal notes to order installation and configuration process in my head, but if it can be useful for somebody else, all the better! :)
+
+General dependencies: curl, git, nmcli
 
 ## OS parts
 
@@ -30,8 +34,18 @@ I changed :
 After making changes to the file you need to run `sudo make clean install` in the dwm directory to compile and install in on your system. The chages will take place after login.
 
 # DOCS TODO:
+## Important things
 - [x] Window manager - dwm
 - [ ] Terminal emulator - st
 - [ ] Launcher - dmenu
 - [ ] File manager - ranger || vifm
 - [ ] Browsers - firefox && surf
+
+## Small things
+- [ ] fonts
+- [ ] icons-in-terminal
+- [ ] wallpapers
+- [ ] wifi on/off function
+- [ ] vim config
+
+# BEFORE PUSHING REVIEW DIFFS FOR SENSITIVE INFORMATION !!!
