@@ -8,24 +8,19 @@ General dependencies: curl, git, nmcli
 
 ## OS parts
 
-### Window Manager - [DWM 6.2](https://dwm.suckless.org/)
+### Window Manager - [dwm 6.2](https://dwm.suckless.org/)
 
 DWM (Dynamc Window Manager) is part of the [suckless](https://suckless.org/philosophy/) software suite. In order to run it `xorg` needs to be installed and the file `.xinitrc` should contain instruction `exec dwm`. 
 For transparency to work it is necesary to install `compton` and launch it via `.xinitrc`. Transparency can be set in `.Xresources` file using value for `\*.alpha` (0-255).
 NOTE: I don't use any `display manager` at the moment.  
 
-#### General config 
-I used a fork of st created by [Luke Smith](https://github.com/LukeSmithxyz/st) that is already patched with transparency, scroll and some good keybindings.
-
-It works very well and I only made the folowing changes:
-* added keybinding to launch Firefox on Alt+Shif+w
 
 #### Status bar configuration (right-hand side)
 Status bar can be configured using bash scripts and some system utilities.
 
 [Configuration file](./dwm_status)
 
-Dependencies: xsetroot and system utilities used by scripts.
+Dependencies: `xsetroot` and system utilities used by scripts.
 
 In order for the configuration to work it needs to be included into the `.xinitrc` file.
 
@@ -37,13 +32,21 @@ I changed :
 * replaced workplaces numbers with icons (you can paste glyphs)
 * set default workspace for certain programms (use `xprops` to detect class)
 * changed the default size of the main tile in monocle mode. [See dwm docs](https://dwm.suckless.org/tutorial/).
+* added keybinding to launch Firefox on Alt+Shif+w
 
 After making changes to the file you need to run `sudo make clean install` in the dwm directory to compile and install in on your system. The chages will take place after login.
+
+
+
+### Terminal Emulator - [st](https://st.suckless.org/)
+st is another product of suckless community. It's very lightweight and fast and, so far does everything I need.
+I used a fork of st created by [Luke Smith](https://github.com/LukeSmithxyz/st) that is already patched with transparency, scroll and some good keybindings.
+
 
 # DOCS TODO:
 ## Important things
 - [x] Window manager - dwm
-- [ ] Terminal emulator - st
+- [x] Terminal emulator - st
 - [ ] Launcher - dmenu
 - [ ] File manager - ranger || vifm
 - [ ] Browsers - firefox && surf
