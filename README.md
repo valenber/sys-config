@@ -80,11 +80,15 @@ I changed :
 After making changes to the file you need to run `sudo make clean install` in the dwm directory to compile and install in on your system. The chages will take place after login.
 
 
-
 ### Terminal Emulator - [st](https://st.suckless.org/)
 st is another product of suckless community. It's very lightweight and fast and, so far does everything I need.
 I used a fork of st created by [Luke Smith](https://github.com/LukeSmithxyz/st) that is already patched with transparency, scroll and some good keybindings.
 For transparency to work it is necesary to install `compton` and launch it via `.xinitrc`. Transparency can be set in `.Xresources` file using value for `\*.alpha` (0-255).
+
+
+### Screen locker - [slock](https://tools.suckless.org/slock/)
+Very minimalistic screen locker. After downloading set `user` and `group` in *config.h* and run `sudo make clean install`, then execute `slock` to lock your screen. 
+Config also allows to change the colors.
 
 
 # DOCS TODO:
