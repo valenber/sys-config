@@ -42,6 +42,6 @@ battery() {
 }
 
 while true; do
-  xsetroot -name "$(battery) | $(fecha) | $(user)"
+  xsetroot -name "  $(battery) | $(fecha) | $(user) "
   sleep 1m
 done 
