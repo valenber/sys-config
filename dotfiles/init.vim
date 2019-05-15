@@ -23,8 +23,12 @@ set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 "
 call plug#begin()
 
+"syntax highlighting
 Plug 'haishanh/night-owl.vim'
-
+Plug 'digitaltoad/vim-pug'
+" autocompletion
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'honza/vim-snippets'
 call plug#end()
 
 
@@ -41,6 +45,23 @@ colorscheme night-owl
 
 " KEY MAPPINGS
 "-------------
+
+" Use <c-space> to trigger completion.
+"inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <Tab> to trigger completion.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
 
 " Navigating buffers
 nnoremap gb :ls<CR>:buffer<Space>
