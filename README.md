@@ -49,6 +49,10 @@ This will allow user to trigger hibernation with certain system events.
 
 In the file */etc/systemd/logind.conf* uncomment the line `HandleLidSwitch` and set its value to `hibernate`. This will trigger the hibernation when the laptop is closed. You can also setup other hooks in this file, e.g. `IdleAction` & `IdleActionSec`.
 
+## Language
+To add another input language I used the following command in *.xinitrc* file:
+'setxkbmap -model pc105 -layout us,ru -option grp:ctrl_shift_toggle'.
+Don't forget to add '&' at the end, so subsequent instructions inside *.xinitrc* continue executing.
 
 ## OS components
 
