@@ -18,6 +18,22 @@ set ai
 " tabulation
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 
+" tabcompletion for files
+set wildmode=longest,list,full
+
+" disable automatic comments on new line
+set formatoptions-=cro
+
+" splits configuration - :sp :vsp
+set splitbelow splitright
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" replace all
+nnoremap S :%s//g<Left><Left>
+
 " PLUGINS
 " -------
 "
