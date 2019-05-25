@@ -79,7 +79,8 @@ I changed :
 * replaced workplaces numbers with icons (you can paste glyphs)
 * set default workspace for certain programms (use `xprops` to detect class)
 * changed the default size of the main tile in monocle mode. [See dwm docs](https://dwm.suckless.org/tutorial/).
-* added keybinding to launch Firefox on Alt+Shif+w
+* added keybinding to launch Firefox on Alt+Shift+w
+* added keybinding to launch Chrome on Alt + w (inside Chrome setting you can set urls the browser should open on launch. I used it to launch web versions of the chat apps I habitually use)
 
 After making changes to the file you need to run `sudo make clean install` in the dwm directory to compile and install in on your system. The chages will take place after login.
 

@@ -36,7 +36,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
  { "Firefox", NULL, NULL, 1 << 1, False,  -1 },
- { "Skype", NULL, NULL, 1 << 2, True,  -1 },
+ { "Google-chrome", NULL, NULL, 1 << 2, False,  -1 },
 };
 
 /* layout(s) */
@@ -67,11 +67,13 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_green, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browser[] = {"firefox", NULL};
+static const char *web_chats[] = {"google-chrome-stable", NULL};
 static const char *lock_screen[]  = { "st","-e","slock", NULL };
 
 static Key keys[] = {
   /* custom key bindings */
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browser } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = web_chats } },
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
