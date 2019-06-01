@@ -112,7 +112,7 @@ Host Others
   IdentityFile ~/.ssh/id_rsa
 
 ```
-
+It is also necessary to add a script to shell configuration that starts-up ssh-agent and adds keys to it. See [config.fish](./dotfiles/config.fish).
 
 
 # DOCS TODO:
