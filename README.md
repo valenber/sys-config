@@ -95,6 +95,25 @@ For transparency to work it is necesary to install `compton` and launch it via `
 Very minimalistic screen locker. After downloading set `user` and `group` in *config.h* and run `sudo make clean install`, then execute `slock` to lock your screen. 
 Config also allows to change the colors.
 
+### SSH config
+In order to access my personal and work remote code repositories I need to configure two ssh-keys.
+The second key is generated in a standard manner (`ssh-keygen`) and just saved with different name. To use specific key for specific host a rule needs to be added to `.ssh/config` file, e.g.:
+
+```
+Host WorkRepo
+  HostName bitbucket.com
+  User officeUser
+  IdentityFile ~/.ssh/id_rsa_work
+
+
+Host Others
+  HostName *
+  User personalUser
+  IdentityFile ~/.ssh/id_rsa
+
+```
+
+
 
 # DOCS TODO:
 ## Important things
@@ -102,7 +121,6 @@ Config also allows to change the colors.
 - [x] Terminal emulator - st
 - [ ] Launcher - dmenu
 - [ ] File manager - ranger || vifm
-- [ ] Browsers - firefox && surf
 
 ## Small things
 - [ ] fonts
