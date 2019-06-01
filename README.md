@@ -82,6 +82,7 @@ I changed :
 * added keybinding to launch Firefox on Alt+Shift+w
 * added keybinding to launch Chrome on Alt + w (inside Chrome setting you can set urls the browser should open on launch. I used it to launch web versions of the chat apps I habitually use)
 * added keybindings for system volume control
+* added keybindings for screen brightness control
 
 After making changes to the file you need to run `sudo make clean install` in the dwm directory to compile and install in on your system. The chages will take place after login.
 
@@ -114,6 +115,12 @@ Host Others
 
 ```
 It is also necessary to add a script to shell configuration that starts-up ssh-agent and adds keys to it. See [config.fish](./dotfiles/config.fish).
+
+
+
+## Custom scripts
+If you want to extend or combine functionality of some command in your system, a good way to do it is to add a custom bash script. You can write your logic into a file, copy it into /usr/bin/ folder and make it executable. After this the name of the file becomes a command that can be run inside your shell. It can accept parametres and generaly behaves like any other command you execute in a shell.
+See [custom_scripts folder](./custom_scripts/) for examples.
 
 
 # DOCS TODO:
