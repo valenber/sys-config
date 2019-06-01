@@ -52,6 +52,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
+#include <X11/XF86keysym.h>
 #define MODKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
@@ -70,10 +71,21 @@ static const char *browser[] = {"firefox", NULL};
 static const char *web_chats[] = {"google-chrome-stable", NULL};
 static const char *lock_screen[]  = { "st","-e","slock", NULL };
 
+/* sound controls */
+static const char *upvol[]   = { "amixer", "set", "Master", "10+", NULL };
+static const char *downvol[] = { "amixer", "set", "Master", "10-",     NULL };
+static const char *mutevol[] = { "amixer", "set", "Master", "toggle", NULL };
+
 static Key keys[] = {
   /* custom key bindings */
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browser } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = web_chats } },
+  
+  /* sound controls */
+	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
+	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
+
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
