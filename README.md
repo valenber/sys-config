@@ -53,7 +53,7 @@ To add another input language I used the following command in *.xinitrc* file:
 Don't forget to add '&' at the end, so subsequent instructions inside *.xinitrc* continue executing.
 
 
-## Touchpad config
+### Touchpad config
 In order to contrl the touchpad configuration we need to have `libinput` package installed in the system. Then configuration is done by editing `/usr/share/X11/xorg.conf.d/40-libinput.conf` file. Each section is responsible for specific device in our system and we can add Option line to change default configuration e.g.:
 ```
  Section "InputClass"
@@ -66,7 +66,7 @@ In order to contrl the touchpad configuration we need to have `libinput` package
 ```
 
 
-## Fish abbreviations
+### Fish abbreviations
 To speed-up common tasks we can add abbreviations for the shell inside `config.fish` file. For example to always get detaile listing of the directory we can use
 ```
 abbr ls 'ls -la'
