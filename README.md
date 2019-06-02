@@ -1,5 +1,3 @@
-# BEFORE PUSHING REVIEW DIFFS FOR SENSITIVE INFORMATION !!!
-
 # Manjaro System Setup 
 
 This config is based on Manjaro (Architect Edition) instalation. It includes multiple dotfiles, scripts and suckless software configs focused on web development. More than anything this is a collection of personal notes to order installation and configuration process in my head, but if it can be useful for somebody else, all the better! :)
@@ -49,10 +47,30 @@ This will allow user to trigger hibernation with certain system events.
 
 In the file */etc/systemd/logind.conf* uncomment the line `HandleLidSwitch` and set its value to `hibernate`. This will trigger the hibernation when the laptop is closed. You can also setup other hooks in this file, e.g. `IdleAction` & `IdleActionSec`.
 
-## Language
+### Language
 To add another input language I used the following command in *.xinitrc* file:
 'setxkbmap -model pc105 -layout us,ru -option grp:ctrl_shift_toggle'.
 Don't forget to add '&' at the end, so subsequent instructions inside *.xinitrc* continue executing.
+
+
+## Touchpad config
+In order to contrl the touchpad configuration we need to have `libinput` package installed in the system. Then configuration is done by editing `/usr/share/X11/xorg.conf.d/40-libinput.conf` file. Each section is responsible for specific device in our system and we can add Option line to change default configuration e.g.:
+```
+ Section "InputClass"
+      Identifier "libinput touchpad catchall"
+      MatchIsTouchpad "on"
+      MatchDevicePath "/dev/input/event*"
+      Option "Tapping" "on"
+      Driver "libinput"
+ EndSection
+```
+
+
+## Fish abbreviations
+To speed-up common tasks we can add abbreviations for the shell inside `config.fish` file. For example to always get detaile listing of the directory we can use
+```
+abbr ls 'ls -la'
+```
 
 ## OS components
 
@@ -74,7 +92,7 @@ In order for the configuration to work it needs to be included into the `.xinitr
 #### Workspaces configuration (left-hand side)
 This part of the bar is configured inside dwm `config.h` file. See [my example](./dotfiles/dwm.config.h). 
 
-I changed :
+I changed:
 * font
 * replaced workplaces numbers with icons (you can paste glyphs)
 * set default workspace for certain programms (use `xprops` to detect class)
@@ -117,24 +135,7 @@ Host Others
 It is also necessary to add a script to shell configuration that starts-up ssh-agent and adds keys to it. See [config.fish](./dotfiles/config.fish).
 
 
-
-## Custom scripts
+### Custom scripts
 If you want to extend or combine functionality of some command in your system, a good way to do it is to add a custom bash script. You can write your logic into a file, copy it into /usr/bin/ folder and make it executable. After this the name of the file becomes a command that can be run inside your shell. It can accept parametres and generaly behaves like any other command you execute in a shell.
 See [custom_scripts folder](./custom_scripts/) for examples.
 
-
-# DOCS TODO:
-## Important things
-- [x] Window manager - dwm
-- [x] Terminal emulator - st
-- [ ] Launcher - dmenu
-- [ ] File manager - ranger || vifm
-
-## Small things
-- [ ] fonts
-- [ ] icons-in-terminal
-- [ ] wallpapers
-- [ ] wifi on/off function
-- [ ] vim config
-
-# BEFORE PUSHING REVIEW DIFFS FOR SENSITIVE INFORMATION !!!

@@ -64,9 +64,13 @@ source ~/.local/share/icons-in-terminal/icons.fish
 
 # ALIASES
 # -------
-
-alias gs="git status"
 alias vim="nvim"
+
+# ABBREVIATIONS
+# -------------
+abbr gd 'git diff'
+abbr gs 'git status'
+abbr ls 'ls -la'
 
 # FUNCTIONS
 # ---------
