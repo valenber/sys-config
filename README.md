@@ -54,7 +54,7 @@ Don't forget to add '&' at the end, so subsequent instructions inside *.xinitrc*
 
 
 ### Touchpad config
-In order to contrl the touchpad configuration we need to have `libinput` package installed in the system. Then configuration is done by editing `/usr/share/X11/xorg.conf.d/40-libinput.conf` file. Each section is responsible for specific device in our system and we can add Option line to change default configuration e.g.:
+In order to control the touchpad configuration we need to have `libinput` package installed in the system. Then configuration is done by editing `/usr/share/X11/xorg.conf.d/40-libinput.conf` file. Each section is responsible for specific device in our system and we can add Option line to change default configuration e.g.:
 ```
  Section "InputClass"
       Identifier "libinput touchpad catchall"
@@ -67,7 +67,7 @@ In order to contrl the touchpad configuration we need to have `libinput` package
 
 
 ### Fish abbreviations
-To speed-up common tasks we can add abbreviations for the shell inside `config.fish` file. For example to always get detaile listing of the directory we can use
+To speed-up common tasks we can add abbreviations for the shell inside `config.fish` file. For example to always get detailed listing of the directory we can use
 ```
 abbr ls 'ls -la'
 ```
@@ -79,6 +79,12 @@ abbr ls 'ls -la'
 DWM (Dynamc Window Manager) is part of the [suckless](https://suckless.org/philosophy/) software suite. In order to run it `xorg` needs to be installed and the file `.xinitrc` should contain instruction `exec dwm`. 
 NOTE: I don't use any `display manager` at the moment.  
 
+#### Change mod key
+By default, dwm maps left alt key as the mod key, however it it easy to change it to Windows key (if you have one). Inside `config.h` file, replace the following line:
+```
+- #define MODKEY Mod1Mask
++ #define MODKEY Mod4Mask
+```
 
 #### Status bar configuration (right-hand side)
 Status bar can be configured using bash scripts and some system utilities.
