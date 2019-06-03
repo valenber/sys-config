@@ -49,7 +49,7 @@ In the file */etc/systemd/logind.conf* uncomment the line `HandleLidSwitch` and 
 
 ### Language
 To add another input language I used the following command in *.xinitrc* file:
-'setxkbmap -model pc105 -layout us,ru -option grp:ctrl_shift_toggle'.
+'setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle'.
 Don't forget to add '&' at the end, so subsequent instructions inside *.xinitrc* continue executing.
 
 

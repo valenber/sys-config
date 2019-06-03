@@ -71,6 +71,7 @@ alias vim="nvim"
 abbr gd 'git diff'
 abbr gs 'git status'
 abbr ls 'ls -la'
+abbr fc 'cd ~/code'
 
 # FUNCTIONS
 # ---------
