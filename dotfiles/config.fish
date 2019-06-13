@@ -21,7 +21,8 @@ function test_identities
     ssh-add -l | grep "The agent has no identities" > /dev/null
     if [ $status -eq 0 ]
 
-        ssh-add ~/.ssh/id_rsa*
+        ssh-add ~/.ssh/id_rsa
+        ssh-add ~/.ssh/id_rsa_redbility
         if [ $status -eq 2 ]
             start_agent
         end
@@ -70,6 +71,8 @@ alias vim="nvim"
 # -------------
 abbr gd 'git diff'
 abbr gs 'git status'
+abbr gaa 'git add .'
+abbr gl 'git log'
 abbr ls 'ls -la'
 abbr fc 'cd ~/code'
 
@@ -80,7 +83,7 @@ abbr fc 'cd ~/code'
 function wifi_on
 	echo "Attempting to connect to $argv[1]..."
 	nmcli radio wifi on
-	sleep 10s
+	sleep 5s
 	nmcli device wifi connect $argv[1] password $argv[2]
 end
 
