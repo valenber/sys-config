@@ -42,6 +42,8 @@ call plug#begin()
 "syntax highlighting
 Plug 'haishanh/night-owl.vim'
 Plug 'digitaltoad/vim-pug'
+Plug 'pangloss/vim-javascript'
+Plug 'cakebaker/scss-syntax.vim'
 " autocompletion
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'honza/vim-snippets'
