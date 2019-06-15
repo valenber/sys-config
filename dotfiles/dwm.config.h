@@ -72,8 +72,8 @@ static const char *web_chats[] = {"google-chrome-stable", NULL};
 static const char *lock_screen[]  = { "st","-e","slock", NULL };
 
 /* sound controls */
-static const char *upvol[]   = { "amixer", "set", "Master", "10+", NULL };
-static const char *downvol[] = { "amixer", "set", "Master", "10-",     NULL };
+static const char *upvol[]   = { "amixer", "set", "Master", "5+", NULL };
+static const char *downvol[] = { "amixer", "set", "Master", "5-",     NULL };
 static const char *mutevol[] = { "amixer", "set", "Master", "toggle", NULL };
 
 /* screen brightness controls */
