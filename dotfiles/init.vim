@@ -31,9 +31,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" replace all
-nnoremap S :%s//g<Left><Left>
-
 " PLUGINS
 " -------
 "
@@ -64,6 +61,9 @@ colorscheme night-owl
 " KEY MAPPINGS
 "-------------
 
+" replace all
+nnoremap S :%s//g<Left><Left>
+
 " Use <c-space> to trigger completion.
 "inoremap <silent><expr> <c-space> coc#refresh()
 
@@ -91,8 +91,11 @@ set hidden
 " escape key alternative
 inoremap jk <ESC>
 
-
 " INPUT HELPERS
 " close curly bracket and indent inside
 inoremap ,{ {}<Left><CR><CR><Up><Tab>
+" arrow function
+inoremap ,( = () => {}<Left><CR><CR><Up><Tab>
+" async arrow function
+inoremap ,a( = async () => {}<Left><CR><CR><Up><Tab>
 
