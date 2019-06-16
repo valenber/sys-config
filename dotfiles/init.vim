@@ -41,6 +41,7 @@ Plug 'haishanh/night-owl.vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'pangloss/vim-javascript'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'posva/vim-vue'
 " autocompletion
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'honza/vim-snippets'
