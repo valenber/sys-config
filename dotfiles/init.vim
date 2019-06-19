@@ -96,7 +96,7 @@ inoremap jk <ESC>
 " close curly bracket and indent inside
 inoremap ,{ {}<Left><CR><CR><Up><Tab>
 " arrow function
-inoremap ,( = () => {}<Left><CR><CR><Up><Tab>
+inoremap ,( () => {}<Left><CR><CR><Up><Tab>
 " async arrow function
-inoremap ,a( = async () => {}<Left><CR><CR><Up><Tab>
+inoremap ,a( async () => {}<Left><CR><CR><Up><Tab>
 
