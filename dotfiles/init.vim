@@ -42,9 +42,18 @@ Plug 'digitaltoad/vim-pug'
 Plug 'pangloss/vim-javascript'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'posva/vim-vue'
+
+" Status line
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " autocompletion
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'honza/vim-snippets'
+Plug 'kien/ctrlp.vim'
+
+" decor
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 
@@ -99,4 +108,22 @@ inoremap ,{ {}<Left><CR><CR><Up><Tab>
 inoremap ,( () => {}<Left><CR><CR><Up><Tab>
 " async arrow function
 inoremap ,a( async () => {}<Left><CR><CR><Up><Tab>
+
+
+" === Vim airline ==== "
+
+" theme
+"let g:airline_theme='space'
+
+" Enable extensions
+let g:airline_extensions = ['branch', 'hunks', 'coc']
+
+" Configure error/warning section to use coc.nvim
+let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
+let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
+
+" Enable powerline fonts
+let g:airline_powerline_fonts = 1
+
+
 
