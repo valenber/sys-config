@@ -43,7 +43,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'posva/vim-vue'
 
-" Status line
+" status line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -54,6 +54,15 @@ Plug 'kien/ctrlp.vim'
 
 " decor
 Plug 'ryanoasis/vim-devicons'
+
+" bookmarks
+Plug 'MattesGroeger/vim-bookmarks'
+
+" commenting
+Plug 'tpope/vim-commentary'
+
+" git integration
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 
@@ -111,12 +120,6 @@ inoremap ,a( async () => {}<Left><CR><CR><Up><Tab>
 
 
 " === Vim airline ==== "
-
-" theme
-"let g:airline_theme='space'
-
-" Enable extensions
-let g:airline_extensions = ['branch', 'hunks', 'coc']
 
 " Configure error/warning section to use coc.nvim
 let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
