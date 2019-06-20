@@ -127,6 +127,3 @@ let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_
 
 " Enable powerline fonts
 let g:airline_powerline_fonts = 1
-
-
-

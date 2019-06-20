@@ -1,0 +1,3 @@
+let l:bm_file_version = 1
+let l:bm_sessions = {'default': {'/home/valenber/code/system-config/dotfiles/init.vim': [{'sign_idx': 9503, 'line_nr': 113, 'content': '" INPUT HELPERS'},{'sign_idx': 9500, 'line_nr': 34, 'content': '" PLUGINS'},{'sign_idx': 9501, 'line_nr': 5, 'content': '" GENERAL EDITOR CONFIG'},{'sign_idx': 9502, 'line_nr': 69, 'content': '" VISUALS'},{'sign_idx': 9504, 'line_nr': 122, 'content': '" === Vim airline ==== "'},],'/home/valenber/code/system-config/dotfiles/config.fish': [{'sign_idx': 9507, 'line_nr': 66, 'content': '# ALIASES'},{'sign_idx': 9506, 'line_nr': 49, 'content': '# SHELL SETTINGS'},],}}
+let l:bm_current_session = 'default'
