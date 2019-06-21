@@ -113,7 +113,6 @@ After making changes to the file you need to run `sudo make clean install` in th
 
 ### Terminal Emulator - [st](https://st.suckless.org/)
 st is another product of suckless community. It's very lightweight and fast and, so far does everything I need.
-I used a fork of st created by [Luke Smith](https://github.com/LukeSmithxyz/st) that is already patched with transparency, scroll and some good keybindings.
 For transparency to work it is necesary to install `compton` and launch it via `.xinitrc`. Transparency can be set in `.Xresources` file using value for `\*.alpha` (0-255).
 
 
