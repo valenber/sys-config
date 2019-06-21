@@ -7,6 +7,7 @@
 # --------------------------------------------
 
 setenv SSH_ENV $HOME/.ssh/environment
+set theme_color_scheme gruvbox
 
 function start_agent                                                                                                                                                                    
     echo "Initializing new SSH agent ..."
