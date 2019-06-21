@@ -12,6 +12,7 @@ syntax on
 syntax enable
 set number relativenumber
 set encoding=utf8
+language en_US
 set wrap
 " autoindent
 set ai
@@ -30,6 +31,20 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" ignore some folders when fuzzy searching
+set wildignore+=*/tmp/*
+set wildignore+=*/target/*
+set wildignore+=*/build/*
+set wildignore+=*.so
+set wildignore+=*.o
+set wildignore+=*.class
+set wildignore+=*.swp
+set wildignore+=*.zip
+set wildignore+=*.pdf
+set wildignore+=*/node_modules/*
+set wildignore+=*/bower_components/*
+set wildignore+=*/dist/*
 
 " PLUGINS
 " -------
