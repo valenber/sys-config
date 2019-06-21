@@ -12,7 +12,7 @@ syntax on
 syntax enable
 set number relativenumber
 set encoding=utf8
-language en_US
+language en_US.UTF-8
 set wrap
 " autoindent
 set ai
