@@ -2,6 +2,7 @@
 #  Fish shell configuration file
 #  this should be linked to ~/.config/fish/
 
+export PAGER="most"
 
 # SSH-AGENT launch and add all keys on startup 
 # --------------------------------------------
