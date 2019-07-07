@@ -132,6 +132,8 @@ inoremap ,{ {}<Left><CR><CR><Up><Tab>
 inoremap ,( () => {}<Left><CR><CR><Up><Tab>
 " async arrow function
 inoremap ,a( async () => {}<Left><CR><CR><Up><Tab>
+" console.log
+inoremap ,l console.log()<Left>
 
 
 " === Vim airline ==== "
