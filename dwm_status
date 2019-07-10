@@ -5,6 +5,19 @@
 # make icon variables available
 source ~/.local/share/icons-in-terminal/icons_bash.sh
 
+updates() {
+  number="$(pacman -Qu | wc -l)"
+
+  message="$fa_download $number"
+
+  if [ "$number" -gt 0 ]
+  then
+    echo -e "$message |"
+  else
+    echo ""
+  fi
+
+}
 
 fecha() {
   fecha="$(date +"%H:%M")"
@@ -42,6 +55,6 @@ battery() {
 }
 
 while true; do
-  xsetroot -name "  $(battery) | $(fecha) | $(user) "
-  sleep 1m
+  xsetroot -name " $(updates) $(battery) | $(fecha) | $(user) "
+  sleep 10s
 done 
