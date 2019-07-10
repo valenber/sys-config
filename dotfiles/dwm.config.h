@@ -25,6 +25,8 @@ static const char *colors[][3]       = {
   [SchemeNorm] = { light_text, col_blue_grey, col_blue_grey },
   [SchemeSel]  = { primary_text, col_green,  col_green  },
 };
+/* gaps */ 
+static const unsigned int gappx     = 0;
 
 /* tagging */
 static const char *tags[] = { " code", " web", " chats", " media", " ", " "};
@@ -42,7 +44,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.70; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
   /* symbol     arrange function */
